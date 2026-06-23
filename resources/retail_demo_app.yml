@@ -1,0 +1,6 @@
+resources:
+  apps:
+    retail_demo_app:
+      name: "retail-demo-interview"
+      description: "Retail Customer Intelligence — Churn, Demand, GenAI · Databricks SA Interview"
+      source_code_path: ../src/app

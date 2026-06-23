@@ -1,0 +1,17 @@
+resources:
+  jobs:
+    churn_model_job:
+      name: "[${bundle.target}] Retail Demo — Churn Model"
+      tasks:
+        - task_key: train_churn_model
+          notebook_task:
+            notebook_path: ../notebooks/02_churn_model.py
+            source: WORKSPACE
+
+    demand_forecast_job:
+      name: "[${bundle.target}] Retail Demo — Demand Forecast"
+      tasks:
+        - task_key: compute_demand_forecast
+          notebook_task:
+            notebook_path: ../notebooks/03_demand_forecast.py
+            source: WORKSPACE

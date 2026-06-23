@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Node / frontend build
+src/app/frontend/node_modules/
+src/app/static/assets/
+
+# Databricks bundle state
+.databricks/
+
+# Claude Code internals
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

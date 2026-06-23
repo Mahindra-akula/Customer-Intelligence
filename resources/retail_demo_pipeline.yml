@@ -1,0 +1,12 @@
+resources:
+  pipelines:
+    retail_demo_pipeline:
+      name: "[${bundle.target}] Retail Demo — Customer Intelligence Pipeline"
+      serverless: true
+      catalog: retail_demo
+      target: retail_data
+      libraries:
+        - notebook:
+            path: ../pipelines/01_dlt_pipeline.py
+      continuous: false
+      channel: PREVIEW
