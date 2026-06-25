@@ -1,17 +1,9 @@
 # IMPLEMENTATION PROMPT — Retail Customer Intelligence on Databricks
-## SA Panel Interview · 4h Build + 1h Demo
+
 
 ## Mission
 Build a working Databricks prototype that solves a mid-sized retailer's inability to make fast, data-driven decisions. The four problems: scattered data with no single source of truth, gut-instinct decisions on inventory/staffing/churn/risk, no forecasting infrastructure, and untapped accumulated knowledge.
 
-The demo must land with three distinct personas in 60 minutes:
-- **Business Leader** — sees the revenue at risk number and the customer churn risk
-- **CTO** — sees medallion lineage, Unity Catalog governance, one-workspace answer
-- **VP of Engineering** — sees the ML model output, live API, and RAG assistant working
-
-> "Every exec meeting starts with a debate about whose numbers are right. This platform ends that debate — one catalog, one query, one answer."
-
----
 
 ## Workspace
 | Setting | Value |
@@ -357,22 +349,7 @@ Open the app URL in browser. Check each tab:
 
 ---
 
-## Demo Script Cues (4-Layer Narrative)
 
-| Persona | Moment | Line |
-|---------|--------|------|
-| **Business Leader** | Executive KPI cards | "Every exec meeting starts with a debate about whose numbers are right. This number — $X monthly revenue at risk — comes from one table. No debate." |
-| **Business Leader** | Churn risk tier donut | "These are your customers, scored by ML this morning. The 30% in red haven't ordered in over 30 days. Without this, you find out when they cancel." |
-| **Business Leader** | "Reach Out" button | "One click adds this customer to a retention workflow. No CRM integration needed for the demo — in production, this fires a Salesforce task." |
-| **CTO** | Architecture tab | "Four layers, one workspace. Snowflake needs a separate BI tool, separate governance layer, separate orchestrator. This is Databricks." |
-| **CTO** | Architecture — Unity Catalog badge | "Every table has lineage. Click any gold table in Unity Catalog — you see exactly which bronze record it came from. That's the CTO's compliance answer." |
-| **CTO** | DLT pipeline | "DLT switches from batch to streaming with one line change — `spark.read` to `spark.readStream` in the bronze layer. No pipeline rewrite." |
-| **VP Engineering** | Churn Risk table | "XGBoost trained on 1,000 customers in under 30 seconds. ROC-AUC logged to MLflow. Model registered in Unity Catalog. Retrain is one notebook run." |
-| **VP Engineering** | Regional stacked bar | "Five regions, three risk tiers — this pivot came from one SQL GROUP BY with no BI tool in the middle. FastAPI returns it in under 50ms from cache." |
-| **VP Engineering** | RetailAdvisor AI tab | "This isn't ChatGPT hallucinating. The answer is grounded in live SQL — it pulled the churn count, the inventory alert count, and the regional breakdown before generating one word." |
-| **All** | Architecture tab → this app | "One URL. Business Leader, CTO, VP Engineering each see their view. No separate tools, no separate logins, no connectors to maintain." |
-
----
 
 ## Troubleshooting
 
